@@ -7,7 +7,7 @@ import net.lemnik.eodsql.Update;
 import java.util.List;
 
 public interface WorldDAI extends BaseQuery {
-    @Select("SELECT world_id, name FROM world WHERE world_id = ?{1}")
+    @Select("SELECT * FROM world WHERE world_id = ?{1}")
     WorldDO getWorld(int worldID);
 
     @Select("SELECT world_id, name FROM world WHERE name = ?{1}")
@@ -19,7 +19,10 @@ public interface WorldDAI extends BaseQuery {
     @Select("SELECT world_id FROM world WHERE name = ?{1}")
     int getWorldID(String worldName);
 
-    @Update("INSERT INTO WORLD(name) VALUES(?{1})")
+    @Select("SELECT name FROM world WHERE world_id = ?{1}")
+    String getWorldName(int worldID);
+
+    @Update("INSERT INTO world(name) VALUES(?{1})")
     void addWorld(String worldName);
 
     @Update("UPDATE world SET name = ?{2} WHERE world_id = ?{1}")

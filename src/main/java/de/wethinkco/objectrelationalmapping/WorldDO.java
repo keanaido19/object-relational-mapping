@@ -12,7 +12,7 @@ public class WorldDO {
         return id;
     }
 
-    @ResultColumn(value = "world_id")
+    @ResultColumn("world_id")
     public void setPrimaryKey(int key) {
         this.id = key;
     }
@@ -21,7 +21,7 @@ public class WorldDO {
         return name;
     }
 
-    @ResultColumn(value = "name")
+    @ResultColumn("name")
     public void setWorldName(String worldName) {
         this.name = worldName;
     }
