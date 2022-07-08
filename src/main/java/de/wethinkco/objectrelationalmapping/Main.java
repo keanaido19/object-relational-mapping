@@ -48,7 +48,7 @@ public class Main {
                 DaoManager.createDao(connectionSource, World.class);
 //
         World world = new World();
-        world.setName("world5");
+        world.setName("world1");
         world.setWorldData(worldData);
 
         worldDao.create(world);

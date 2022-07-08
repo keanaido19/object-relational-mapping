@@ -19,13 +19,13 @@ public class World {
     )
     private WorldData worldData;
 
-    @ForeignCollectionField(eager = true)
+    @ForeignCollectionField()
     private ForeignCollection<Obstacle> obstacles;
 
-    @ForeignCollectionField(eager = true)
+    @ForeignCollectionField()
     private ForeignCollection<Pit> pits;
 
-    @ForeignCollectionField(eager = true)
+    @ForeignCollectionField()
     private ForeignCollection<Mine> mines;
 
     public World() {}
